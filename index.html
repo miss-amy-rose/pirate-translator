@@ -1,0 +1,46 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Pirata+One&display=swap" rel="stylesheet">
+<style type="text/css">
+    textarea { 
+    width: 400px; 
+    height: 200px; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium
+ };
+</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+            { $("#normal").keyup(function(){
+            var words = $("#normal").val();
+            words = words.replace(/^/, "Arr, me hearties. ");
+            words = words.replace(/(\w+)ev(\w+)\s/g, "$1e'$2 ");
+            words = words.replace(/hello/gi, "ahoy");
+            words = words.replace(/pirate/gi, "sea dog");
+            words = words.replace(/you/gi, "yer");
+            words = words.replace(/stop/gi, "avast");
+            words = words.replace(/my/gi, "me");
+            words = words.replace(/aye/gi, "yes");
+            words = words.replace(/treasure/gi, "booty");
+            words = words.replace(/captain/gi, "Cap'n");
+            words = words.replace(/alcohol/gi, "grog");
+            words = words.replace(/friend/gi, "matey");
+            words = words.replace(/rob/gi, "pillage");
+            $("#pirate").val(words);
+            }); 
+            })
+        
+    </script>
+</head>
+
+<body>
+
+  <h2>Landlubbers</h2>
+  <textarea id="normal"></textarea>
+  <h2>Pirates</h2>
+  <textarea id="pirate"></textarea>
+
+</body>
+</html>
+        
